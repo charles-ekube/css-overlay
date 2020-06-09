@@ -1,0 +1,79 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: space-between;
+}
+.box{
+    box-sizing: border-box;
+    position: relative;
+    height: calc(300px - 30px);
+    width: calc(300px - 30px);
+    overflow: hidden;
+    background-color: #441280;
+}
+.icon{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transition: all .5s ease-in;
+    z-index: 1;
+    background-color: deeppink;
+}
+.box:hover > .icon{
+    border-radius: 50%;
+    left: calc(50% - 40px);
+    top: 20px;
+    height: 80px;
+    width: 80px;
+}
+.fa{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    color: white !important;
+    transform: translate(-50%,-50%);
+    font-size: 80px;
+    transition: font-size .5s ease-in;
+}
+.box:hover .fa{
+    font-size: 40px;
+    color: white;
+}
+.content{
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    height: calc(100% - 100px);
+    padding: 20px 0;
+    text-align: center;
+    box-sizing: border-box;
+    transition: all .5s ease-in;
+    opacity: 0;
+}
+.box:hover .content{
+    top: 100px;
+    opacity: 1;
+    color: white;
+}
+.content h3{
+    margin: 0 0 10px;
+    padding: 0;
+    font-size: 18px;
+}
+.content p{
+    margin: 0;
+    padding: 0;
+}
